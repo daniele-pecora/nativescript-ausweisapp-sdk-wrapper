@@ -1,0 +1,9 @@
+/* Add mobile styles for the component here.  */
+.workflowStartImg{
+    border-radius: 10%;
+    width: 300;
+}
+.workflowStartText {
+    font-size: 20;
+    text-align: center;
+}

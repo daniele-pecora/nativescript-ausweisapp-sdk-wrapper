@@ -1,0 +1,54 @@
+{
+  "name": "nativescript-ausweisapp-sdk-wrapper",
+  "version": "1.0.1",
+  "description": "NativeScript plugin to wrap Ausweisapp2 SDK API",
+  "main": "ausweisapp",
+  "typings": "index.d.ts",
+  "nativescript": {
+    "platforms": {
+      "android": "6.0.0"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/daniele-pecora/nativescript-ausweisapp-sdk-wrapper.git"
+  },
+  "scripts": {
+    "tsc": "npm i && tsc",
+    "build": "npm run tsc && npm run build.native",
+    "build.native": "node scripts/build-native.js",
+    "tslint": "cd .. && tslint \"**/*.ts\" --config tslint.json --exclude \"**/node_modules/**\"",
+    "ci.tslint": "npm i && tslint '**/*.ts' --config '../tslint.json' --exclude '**/node_modules/**' --exclude '**/platforms/**'",
+    "prepack": "npm run build.native",
+    "demo-angular.ios": "npm i && cd ../demo-angular && tns run ios",
+    "demo-angular.android": "npm i && cd ../demo-angular && tns run android",
+    "demo-angular.reset": "cd ../demo-angular && npx rimraf -- hooks node_modules platforms package-lock.json",
+    "plugin.prepare": "npm run build undefined && cd ../demo-angular && tns plugin remove nativescript-ausweisapp-sdk-wrapper && tns plugin add ../src",
+    "clean": "npm run demo-angular.reset && npx rimraf -- node_modules package-lock.json && npm i"
+  },
+  "keywords": [
+    "NativeScript",
+    "JavaScript",
+    "Android"
+  ],
+  "author": {
+    "name": "Superfusion Mobile",
+    "email": "superfusion.mobile@googlemail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/daniele-pecora/nativescript-ausweisapp-sdk-wrapper/issues"
+  },
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/daniele-pecora/nativescript-ausweisapp-sdk-wrapper",
+  "devDependencies": {
+    "tns-core-modules": "^6.0.0",
+    "tns-platform-declarations": "^6.0.0",
+    "typescript": "~3.4.5",
+    "prompt": "^1.0.0",
+    "rimraf": "^2.6.3",
+    "tslint": "^5.12.1",
+    "semver": "^5.6.0"
+  },
+  "dependencies": {},
+  "bootstrapper": "nativescript-plugin-seed"
+}

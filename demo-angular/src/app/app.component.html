@@ -1,0 +1,8 @@
+<TabView androidTabsPosition="bottom" selectedIndex="0" (selectedIndexChanged)="onSelectedIndexChanged($event)">
+    <page-router-outlet *tabItem="{title: 'Workflow'}" name="workflowOutlet">
+    </page-router-outlet>
+    <page-router-outlet *tabItem="{title: 'Connector'}" name="sdkconnectorOutlet">
+    </page-router-outlet>
+    <page-router-outlet *tabItem="{title: 'Wrapper'}" name="sdkwrapperOutlet">
+    </page-router-outlet>
+</TabView>

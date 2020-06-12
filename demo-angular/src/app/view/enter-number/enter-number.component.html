@@ -1,0 +1,19 @@
+<StackLayout style="height: 100%;width: 100%;" orientation="vertical" verticalAlignment="center"
+    horizontalAlignment="center">
+    <StackLayout orientation="vertical" verticalAlignment="center" horizontalAlignment="center">
+        <StackLayout orientation="horizontal" horizontalAlignment="center">
+            <TextField class="textField" [secure]="secure" [hint]="textHint" class="textField" [text]="inputText"
+                [maxLength]="maxLen" [class.secure]="secure"></TextField>
+            <Image class="material-icons showPwIconButon" [src]="secure?'font://&#xe8f5;':'font://&#xe8f4;'"
+                (tap)="secure=!secure"></Image>
+        </StackLayout>
+        <number-pad [minLen]="minLen" [maxLen]="maxLen" [(inputText)]="inputText" (onButtonOK)="onButtonOK($event)">
+        </number-pad>
+    </StackLayout>
+    <Button class="-secondary" androidElevation="0" (tap)="cancelButtonPressed($event)">
+        <FormattedString style="vertical-align: middle;color: red;" verticalAligment="center">
+            <!-- <Span text="&#xe5cd;" class="material-icons"></Span> -->
+            <Span text=" Cancel"></Span>
+        </FormattedString>
+    </Button>
+</StackLayout>

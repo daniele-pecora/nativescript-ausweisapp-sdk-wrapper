@@ -1,0 +1,19 @@
+<GridLayout columns="auto,auto,auto" rows="auto,auto,auto,auto,auto">
+    <Button [isEnabled]="enableNumbers" class="-primary -rounded-lg" row="0" col="0" text="1" (tap)="onTap($event, '1')"></Button>
+    <Button [isEnabled]="enableNumbers" class="-primary -rounded-lg" row="0" col="1" text="2" (tap)="onTap($event, '2')"></Button>
+    <Button [isEnabled]="enableNumbers" class="-primary -rounded-lg" row="0" col="2" text="3" (tap)="onTap($event, '3')"></Button>
+    <!-- -->
+    <Button [isEnabled]="enableNumbers" class="-primary -rounded-lg" row="1" col="0" text="4" (tap)="onTap($event, '4')"></Button>
+    <Button [isEnabled]="enableNumbers" class="-primary -rounded-lg" row="1" col="1" text="5" (tap)="onTap($event, '5')"></Button>
+    <Button [isEnabled]="enableNumbers" class="-primary -rounded-lg" row="1" col="2" text="6" (tap)="onTap($event, '6')"></Button>
+    <!-- -->
+    <Button [isEnabled]="enableNumbers" class="-primary -rounded-lg" row="2" col="0" text="7" (tap)="onTap($event, '7')"></Button>
+    <Button [isEnabled]="enableNumbers" class="-primary -rounded-lg" row="2" col="1" text="8" (tap)="onTap($event, '8')"></Button>
+    <Button [isEnabled]="enableNumbers" class="-primary -rounded-lg" row="2" col="2" text="9" (tap)="onTap($event, '9')"></Button>
+    <!-- -->
+    <Button class="-secondary -rounded-lg" row="3" col="0" text="Del" (tap)="onTap($event, 'Del')" [isEnabled]="enableBackspace"></Button>
+    <Button [isEnabled]="enableNumbers" class="-primary -rounded-lg" row="3" col="1" text="0" (tap)="onTap($event, '0')"></Button>
+    <Button class="-accent -rounded-lg" row="3" col="2" text="OK" (tap)="onTap($event, 'OK')" [isEnabled]="enableOK"></Button>
+    <!-- -->
+    <Button class="-secondary -rounded-lg" row="4" col="1" text="Clear" (tap)="onTap($event, 'Clear')" [isEnabled]="enableClear"></Button>
+</GridLayout>

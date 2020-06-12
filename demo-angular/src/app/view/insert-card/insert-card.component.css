@@ -1,0 +1,9 @@
+/* Add mobile styles for the component here.  */
+.insertCardImg{
+    border-radius: 10%;
+    width: 300;
+}
+.insertCardText {
+    font-size: 20;
+    text-align: center;
+}

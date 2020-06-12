@@ -1,0 +1,15 @@
+<StackLayout style="height: 100%;width: 100%;" orientation="vertical" verticalAlignment="center"
+    horizontalAlignment="center">
+    <StackLayout orientation="vertical" verticalAlignment="center"
+        horizontalAlignment="center">
+        <Image class="insertCardImg" src="~/images/nutzung_eid_mit_mobiler_ausweisapp2_bild_6.png" stretch="aspectFit">
+        </Image>
+        <Label textWrap="true" class="insertCardText" text="Put the eID-Card over the NFC sensor"></Label>
+    </StackLayout>
+    <Button class="-secondary" androidElevation="0" (tap)="cancelButtonPressed($event)">
+        <FormattedString style="vertical-align: middle;color: red;" verticalAligment="center">
+            <!-- <Span text="&#xe5cd;" class="material-icons"></Span> -->
+            <Span text=" Cancel"></Span>
+        </FormattedString>
+    </Button>
+</StackLayout>

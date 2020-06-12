@@ -1,0 +1,17 @@
+/* Add mobile styles for the component here.  */
+.textField{
+    placeholder-color:#ccc;
+    width: 200;
+    font-size: 20;
+}
+
+.showPwIconButon {
+    color:#ccc;
+    width: 30;
+    height: 30;
+    margin-left: -30;
+}
+
+.showPwIconButon .secure{
+    font-size: 40;
+}
